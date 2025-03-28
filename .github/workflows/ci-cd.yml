@@ -30,8 +30,8 @@ jobs:
     - name: Build and Push image to ACR
       uses: docker/build-push-action@v5
       with:
-        context: .
-        file: ./test-cicd/Dockerfile
+        context: ./test-cicd
+        file: ./Dockerfile
         push: true
         tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
